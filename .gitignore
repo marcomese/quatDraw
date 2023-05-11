@@ -1,3 +1,6 @@
 *.dat
+*.png
+*.so
+*.zip
 old/
 quatLog*/
