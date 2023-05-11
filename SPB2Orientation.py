@@ -50,8 +50,9 @@ def getCompleteSubSequence(sequence, instances, keyword = 'instance'):
         retVal.append(s)
 
         if (s[keyword] == instances[-1]) and (t1.tm_sec - t0.tm_sec <= 1.0):
-            yield retVal
-            retVal = []
+            return retVal
+    
+    return None
 
 class packet_reader(object):
     def __init__(self, influxHost, influxQuery = defaultQuery,
